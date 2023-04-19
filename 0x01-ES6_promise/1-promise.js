@@ -1,14 +1,20 @@
-const API_ERROR_MESSAGE = 'The fake API is not working currently'
-
 export default function getFullResponseFromAPI(success) {
   return new Promise((resolve, reject) => {
+    const error = 'The fake API is not working currently';
     if (success) {
-      const respons = {
+      const response = {
         status: 200,
         body: 'Success',
       };
-      resolve(respons);
+      resolve(response);
+    } else {
+      reject(error);
     }
-    reject(API_ERROR_MESSAGE);
+  }).then((response) => {
+    console.log(response);
+    // Handle successful response here
+  }).catch((error) => {
+    console.error(error);
+    // Handle error response here
   });
 }
