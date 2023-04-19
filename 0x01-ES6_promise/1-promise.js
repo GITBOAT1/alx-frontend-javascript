@@ -6,8 +6,8 @@ export default function getFullResponseFromAPI(success) {
         status: 200,
         body: 'Success',
       };
-      resolve(respons);
+      return resolve(respons);
     }
-    reject(error);
+    return reject(error);
   });
 }
