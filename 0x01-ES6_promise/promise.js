@@ -6,13 +6,15 @@ let error = (a) => {
     console.log(a + "It failed")
 }
 
-const Promise = num => {
+const myPromise = num => {
     return new Promise((resolve, reject) => {
-        if((num % 2) == 0){
+        if ((num % 2) == 0) {
             resolve("success!")
+        } else {
+            reject("Failure!")
         }
-        reject("Faillure!")
     })
 }
-Promise(100).then(success, error)
-Promise(21).then(success, error)
+
+myPromise(100).then(success, error)
+myPromise(21).then(success, error)
