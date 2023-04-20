@@ -4,13 +4,7 @@ const respons = {
 };
 
 export default function handleResponseFromAPI(promise) {
-  promise
-    .then(() => {
-      console.log('Got a response from the API');
-      return respons;
-    })
-    .catch((error) => {
-      console.error('Error:', error);
-      return new Error();
-    });
+  console.log('Got a response from the API');
+  promise.then(() => respons);
+  promise.catch(() => new Error());
 }
