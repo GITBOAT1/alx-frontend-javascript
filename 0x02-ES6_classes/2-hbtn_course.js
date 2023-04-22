@@ -29,6 +29,7 @@ export default class HolbertonCourse {
     this._students = this._checkArray(value, 'Students');
   }
 
+  // eslint-disable-next-line class-methods-use-this
   _checkString(value, name) {
     if (typeof value !== 'string') {
       throw new TypeError(`${name} must be a string`);
@@ -36,6 +37,7 @@ export default class HolbertonCourse {
     return value;
   }
 
+  // eslint-disable-next-line class-methods-use-this
   _checkNumber(value, name) {
     if (typeof value !== 'number') {
       throw new TypeError(`${name} must be a number`);
@@ -43,6 +45,7 @@ export default class HolbertonCourse {
     return value;
   }
 
+  // eslint-disable-next-line class-methods-use-this
   _checkArray(value, name) {
     if (!Array.isArray(value)) {
       throw new TypeError(`${name} must be an array`);
