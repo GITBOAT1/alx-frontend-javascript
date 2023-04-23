@@ -26,7 +26,7 @@ export default class Currency {
   displayFullCurrency() {
     const s = this._code;
     const c = this._name;
-    let t = `${c} (${s})`;
+    const t = `${c} (${s})`;
     return (t);
   }
 }
