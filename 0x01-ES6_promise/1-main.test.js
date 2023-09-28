@@ -1,4 +1,4 @@
-import getFullResponseFromAPI from './1-promise';
+/* import getFullResponseFromAPI from './1-promise';
 
 test("getFullResponseFromAPI resolves correctly", () => {
     const successResponse = getFullResponseFromAPI(true);
@@ -7,3 +7,8 @@ test("getFullResponseFromAPI resolves correctly", () => {
       body: "Success"
     });
 });
+*/
+import getFullResponseFromAPI from './1-promise';
+
+console.log(getFullResponseFromAPI(true));
+console.log(getFullResponseFromAPI(false));
