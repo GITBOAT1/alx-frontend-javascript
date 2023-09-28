@@ -5,10 +5,8 @@ const respons = {
 
 export default function handleResponseFromAPI(promise) {
   return promise
-    .then(() =>{respons})
-    .catch((error) => {
-      return(error);
-    })
+    .then(() => respons)
+    .catch((error) => (error))
     .finally(() => {
       console.log('Got a response from the API');
     });
